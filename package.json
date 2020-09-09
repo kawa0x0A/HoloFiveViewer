@@ -1,15 +1,8 @@
 {
   "name": "HoloFiveViewer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "electron": "^10.1.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Test",
+  "main": "src/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kawa0x0A/HoloFiveViewer.git"
@@ -20,5 +13,41 @@
   "bugs": {
     "url": "https://github.com/kawa0x0A/HoloFiveViewer/issues"
   },
-  "homepage": "https://github.com/kawa0x0A/HoloFiveViewer#readme"
+  "homepage": "https://github.com/kawa0x0A/HoloFiveViewer#readme",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron":"10.1.1",
+    "electron-builder": "^22.8.0"
+  },
+  "build":{
+    "appId": "kawa0x0A.HoloFiveViewer",
+    "productName": "HoloFiveViewer",
+    "copyright": "copyright 2020",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": "zip"
+    }
+  }
 }
