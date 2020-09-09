@@ -3,15 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MY ELECTRON</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
-    <h1>Hello, World!</h1>
+    <div class="grid">
+        <div class="frame1">
+            <webview src="https://www.youtube.com/channel/UCUKD-uaobj9jiqB-VXt71mA" style="display:inline-flex; width:100%; height:100%"/>
+        </div>
+        <div class="frame2">
+            <webview src="https://www.youtube.com/channel/UCFKOVgVbGmX65RxO3EtH3iw" style="display:inline-flex; width:100%; height:100%"/>
+        </div>
+        <div class="frame3">
+            <webview src="https://www.youtube.com/channel/UCK9V2B22uJYu3N7eR_BT9QA" style="display:inline-flex; width:100%; height:100%"/>
+        </div>
+        <div class="frame4">
+            <webview src="https://www.youtube.com/channel/UCAWSyEs_Io8MtpY3m-zqILA" style="display:inline-flex; width:100%; height:100%"/>
+        </div>
+    </div>
 </body>
 
 </html>
